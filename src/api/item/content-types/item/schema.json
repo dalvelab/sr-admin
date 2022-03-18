@@ -1,0 +1,171 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "subcategory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subcategory.subcategory"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::brand.brand"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "old_price": {
+      "type": "decimal"
+    },
+    "width": {
+      "type": "decimal"
+    },
+    "heigth": {
+      "type": "decimal"
+    },
+    "length": {
+      "type": "decimal"
+    },
+    "thickness": {
+      "type": "decimal"
+    },
+    "volume": {
+      "type": "decimal"
+    },
+    "weight": {
+      "type": "decimal"
+    },
+    "layer_thickness": {
+      "type": "decimal"
+    },
+    "application_method": {
+      "type": "string"
+    },
+    "density": {
+      "type": "decimal"
+    },
+    "mark": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "application_area": {
+      "type": "string"
+    },
+    "type_of_work": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "в наличии",
+        "нет в наличии",
+        "ожидается поставка"
+      ]
+    },
+    "vendor_code": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "width_units": {
+      "type": "enumeration",
+      "enum": [
+        "мм",
+        "см",
+        "м",
+        "км"
+      ]
+    },
+    "heigth_units": {
+      "type": "enumeration",
+      "enum": [
+        "мм",
+        "см",
+        "м",
+        "км"
+      ]
+    },
+    "length_units": {
+      "type": "enumeration",
+      "enum": [
+        "мм",
+        "см",
+        "м",
+        "км"
+      ]
+    },
+    "thickness_units": {
+      "type": "enumeration",
+      "enum": [
+        "мм",
+        "см"
+      ]
+    },
+    "volume_units": {
+      "type": "enumeration",
+      "enum": [
+        "л",
+        "см³",
+        "м³"
+      ]
+    },
+    "weight_units": {
+      "type": "enumeration",
+      "enum": [
+        "мг",
+        "г",
+        "кг",
+        "тон"
+      ]
+    },
+    "layer_thickness_units": {
+      "type": "enumeration",
+      "enum": [
+        "мм",
+        "см",
+        "дм",
+        "м"
+      ]
+    },
+    "density_units": {
+      "type": "enumeration",
+      "enum": [
+        "г/см³",
+        "кг/м³"
+      ]
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

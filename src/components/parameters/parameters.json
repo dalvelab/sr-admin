@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_parameters_parameters",
+  "info": {
+    "displayName": "parameters",
+    "icon": "arrows-alt"
+  },
+  "options": {},
+  "attributes": {
+    "length": {
+      "type": "decimal"
+    },
+    "width": {
+      "type": "decimal"
+    },
+    "height": {
+      "type": "decimal"
+    },
+    "thickness": {
+      "type": "decimal"
+    }
+  }
+}
