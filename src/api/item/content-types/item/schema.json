@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "category": {
       "type": "relation",
@@ -39,7 +40,8 @@
       ]
     },
     "price": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": true
     },
     "old_price": {
       "type": "decimal"
@@ -89,10 +91,12 @@
         "в наличии",
         "нет в наличии",
         "ожидается поставка"
-      ]
+      ],
+      "required": true
     },
     "vendor_code": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Description": {
       "type": "text"
