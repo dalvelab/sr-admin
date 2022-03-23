@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "contacts",
+  "collectionName": "feedbacks",
   "info": {
-    "singularName": "contact",
-    "pluralName": "contacts",
-    "displayName": "Contact",
-    "description": ""
+    "singularName": "feedback",
+    "pluralName": "feedbacks",
+    "displayName": "Feedback"
   },
   "options": {
     "draftAndPublish": false
@@ -20,6 +19,9 @@
     },
     "phone": {
       "type": "string"
+    },
+    "body": {
+      "type": "text"
     }
   }
 }
