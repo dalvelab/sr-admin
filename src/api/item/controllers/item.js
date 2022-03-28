@@ -17,4 +17,9 @@ module.exports = createCoreController("api::item.item", ({ strapi }) => ({
 
     return this.transformResponse(results[0]);
   },
+  async count(ctx) {
+    const { query } = ctx.request;
+    const result = await strapi.query("api::item.item").count({ where: query });
+    return { count: result };
+  },
 }));
