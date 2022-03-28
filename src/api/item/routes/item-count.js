@@ -2,7 +2,7 @@ module.exports = {
   routes: [
     {
       method: "GET",
-      path: "/item/count",
+      path: "/items/count",
       handler: "item.count",
     },
   ],
