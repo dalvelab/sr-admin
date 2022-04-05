@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "sr-admin-app",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -18,7 +18,7 @@
     "sqlite3": "5.0.2"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Bragin Vlad"
   },
   "strapi": {
     "uuid": "ac3e47f5-2ffc-4a6f-8484-8e59e41aaf6c"

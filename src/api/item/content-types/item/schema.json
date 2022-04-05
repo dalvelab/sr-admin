@@ -98,9 +98,6 @@
       "type": "string",
       "required": true
     },
-    "Description": {
-      "type": "text"
-    },
     "width_units": {
       "type": "enumeration",
       "enum": [
@@ -170,6 +167,9 @@
     },
     "slug": {
       "type": "string"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
