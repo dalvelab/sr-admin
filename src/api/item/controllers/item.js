@@ -9,6 +9,12 @@ const { uniq, props, prop } = require("ramda");
 const { createCoreController } = require("@strapi/strapi").factories;
 
 module.exports = createCoreController("api::item.item", ({ strapi }) => ({
+  async find(ctx) {
+    const { query } = ctx;
+    const entity = await strapi.service("api::item.item").find(query);
+    const { results } = await this.sanitizeOutput(entity, ctx);
+    return this.transformResponse(results);
+  },
   async findOne(ctx) {
     const { id: slug } = ctx.params;
     const { query } = ctx;
@@ -48,5 +54,18 @@ module.exports = createCoreController("api::item.item", ({ strapi }) => ({
         categories: uniqueCategoriesWithItemCount,
       },
     };
+  },
+  async getFavouriteItems(ctx) {
+    const { query } = ctx;
+    const { id_array } = ctx.request.body;
+
+    const entity = await strapi.service("api::item.item").find(query);
+    const { results } = await this.sanitizeOutput(entity, ctx);
+
+    const filteredResults = results.filter((item) =>
+      id_array.includes(item.id)
+    );
+
+    return this.transformResponse(filteredResults);
   },
 }));
